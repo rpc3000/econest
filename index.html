@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of your page">
+    <meta name="author" content="Your Name">
+    <title>Page Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/style.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="left">
+            <div id="logocontainer">
+                <img src="./resources/images/logo.svg" alt="Site Logo">
+                <h1>Econest</h1>
+            </div>
+        </div>
+        <div class="right">
+            <nav>
+                <ul>
+                    <li><a href="#section-ourmission">Our mission</a></li>
+                    <li><a href="#section-products">Products</a></li>
+                    <li><a href="#section-ourteam">Our Team</a></li>
+                    <li><a href="#section-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="mobileMenu" class="hidden">
+            <ul>
+                <li><a href="#section-ourmission" onclick="closeMenu()">Our mission</a></li>
+                <li><a href="#section-products" onclick="closeMenu()">Products</a></li>
+                <li><a href="#section-aboutus" onclick="closeMenu()">About Us</a></li>
+                <li><a href="#section-contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+        </header>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Section Our Mission -->
+        <section id="section-ourmission">
+            <h1>Our mission</h1>
+            <p>At EcoNest, we are committed to building a greener future by offering innovative, 
+                eco-friendly home solutions that reduce your carbon footprint without compromising 
+                on comfort or style.
+            </p>
+            <p>EcoNest specializes in sustainable home products and solutions. From energy-efficient
+                 appliances to eco-friendly construction materials, we provide everything you need to
+                  create a sustainable living space. Our mission is to make green living accessible to
+                   everyone, ensuring a healthier planet for generations to come.
+            </p>
+        </section>
+
+        <!-- Section Products -->
+        <section id="section-products">
+            <h1>Our Products</h1>
+            <p>Discover our range of sustainable products designed to make your home more energy-efficient
+                 and environmentally friendly. From natural insulation materials to smart home energy systems,
+                  each product in our collection is crafted to reduce your carbon footprint while enhancing
+                   comfort and style. Explore our curated selection below.
+            </p>
+            <div id="products">
+                <div class="product-card">
+                    <h2>Eco-Friendly Insulation</h2>
+                    <img src="./resources/images/01.jpg" alt="A photo of natural insulation materials like sheep's wool or recycled denim.">
+                    <caption>Natural Insulation for Maximum Efficiency</caption>
+                </div>
+
+                <div class="product-card">
+                    <h2>Solar Roof Panels</h2>
+                    <img src="./resources/images/02.jpg" alt="An image of sleek, modern solar panels installed on a roof.">
+                    <caption>Harness the Power of the Sun</caption>
+                </div>
+
+                <div class="product-card">
+                    <h2>Water-Saving Fixtures</h2>
+                    <img src="./resources/images/03.jpg" alt="A modern bathroom with a water-efficient showerhead and faucets.">
+                    <caption>Save Water, Save the Planet</caption>
+                </div>
+
+                <div class="product-card">
+                    <h2>Recycled Building Materials</h2>
+                    <img src="./resources/images/04.jpg" alt="A close-up shot of reclaimed wood or recycled metal beams.">
+                    <caption>Build Green with Recycled Materials</caption>
+                </div>
+
+                <div class="product-card">
+                    <h2>Smart Home Energy Systems</h2>
+                    <img src="./resources/images/05.png" alt="A smartphone controlling a smart thermostat with a sleek interface.">
+                    <caption>Smart Homes for Smart Living</caption>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Section Our Team -->
+        <section id="section-ourteam">
+            <h1>Our Team</h1>
+            <p>
+                At EcoNest, our strength lies in the dedication and expertise of our team. Meet the passionate
+                individuals who are driving our mission to create sustainable, eco-friendly solutions for
+                modern living. Each member of our team brings unique skills and a shared commitment to
+                environmental stewardship. Below, you can learn more about the people behind EcoNest,
+                from our visionary founder to the leaders in sustainability, product development, and marketing.
+                Together, we are working towards a greener future for everyone.
+            </p>
+
+            <div id="people">
+
+                <div class="people-card">
+                    <h2 class="name">John Greenfield</h2>
+                    <h2 class="role">Founder & CEO</h2>
+                    <div>
+                        <img src="./resources/images/ourteam-john.png" alt="">
+                        <p>
+                            John is a passionate environmentalist with over 15 years of experience in sustainable architecture.
+                            His vision for a greener future led to the creation of EcoNest.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="people-card">
+                    <h2 class="name">Emma Rivers</h2>
+                    <h2 class="role">Chief Sustainability Officer</h2>
+                    <div>
+                        <img src="./resources/images/ourteam-emma.jpeg" alt="">
+                        <p>
+                            Emma ensures that EcoNest’s products and practices meet the highest environmental standards.
+                            She has a background in environmental science and renewable energy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="people-card">
+                    <h2 class="name">Lucas Wood</h2>
+                    <h2 class="role">Head of Product Development</h2>
+                    <div>
+                        <img src="./resources/images/ourteam-lucas.png" alt="">
+                        <p>
+                            With a background in engineering, Lucas leads the development of innovative, eco-friendly
+                            products that blend technology with sustainability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="people-card">
+                    <h2 class="name">Sophia Brooks</h2>
+                    <h2 class="role">Marketing Director</h2>
+                    <div>
+                        <img src="./resources/images/ourteam-sophia.png" alt="">
+                        <p>
+                            Sophia’s expertise in digital marketing helps EcoNest reach environmentally-conscious consumers.
+                            She is committed to promoting a greener lifestyle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 rpc3000. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

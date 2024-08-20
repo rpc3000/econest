@@ -1,0 +1,465 @@
+@import url('./reset.css');
+
+:root {
+    /* Colors */
+    --color-primary1: #2C5F2D; /* Forest Green: Represents growth, nature, and sustainability. */
+    --color-primary2: #8D6346; /* Earth Brown: A warm, grounding color that evokes the natural world. */
+    --color-primary3: #5BA4A4; /* Sky Blue: A soft, refreshing color symbolizing air and water, essential elements of life. */
+
+    --color-secondary1: #F4D35E; /* Sunshine Yellow: A bright, energetic accent color for calls to action and highlights. */
+    --color-secondary2: #F2F4F1; /* Soft White: A clean, neutral background color to keep the focus on content. */
+
+    --color-accent1: #6A9F60; /* Leaf Green: A lighter green for subtle accents, such as buttons and links.*/
+    --color-accent2: #3A3A3A; /* Charcoal Gray: For text and icons, providing a modern, readable contrast. */
+    
+    --color-success: #4CAF50; /* Success Green */
+    --color-error: #F44336; /* Error Red */
+    --color-warning: #FFEB3B; /* Warning Yellow */
+    
+    --color-text-main: var(--color-accent2); /* Charcoal Gray for main text */
+    --color-text-secondary: #757575; /* Dark Gray for secondary text */
+    --color-background: var(--color-secondary2); /* Soft White background */
+    --color-border: #E0E0E0; /* Medium Gray for borders */
+    --color-header-background: var(--color-primary1); /* Forest Green for header background */
+    --color-header-text: #FFFFFF; /* White for header text */
+
+    /* Fonts */
+    --font-primary: 'Montserrat', sans-serif; /* Headings */
+    --font-secondary: 'Lora', serif; /* Body text */
+    --font-size-base: 16px;
+    --font-size-heading: 2.25rem;
+    --font-size-subheading: 1.75rem;
+    --font-size-quote: 1.125rem;
+    --font-size-big: 1.4rem;
+    --font-size-small: 0.875rem;
+
+    /* Border Radius */
+    --border-radius-small: 4px;
+    --border-radius-medium: 8px;
+    --border-radius-large: 10px;
+    --border-radius-extra-large: 30px;
+
+    /* Box Shadow */
+    --box-shadow-light: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    --box-shadow-medium: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* Size width and height */
+    --size-header-height: 120px;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-base);
+    color: var(--color-text-main);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    padding: 0;
+}
+
+main {
+    margin: 2rem 2rem;
+    padding-top: var(--size-header-height);
+    /* overflow-x: hidden; */
+}
+
+section {
+    scroll-margin-top: var(--size-header-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    color: var(--color-primary1);
+    padding-top: 2rem;
+}
+
+h1 {
+    font-size: var(--font-size-heading);
+}
+
+h2 {
+    font-size: var(--font-size-subheading);
+}
+
+p {
+    color: var(--color-text-main);
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-big);
+}
+
+a {
+    color: var(--color-accent1);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-secondary1);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--color-header-background);
+    color: var(--color-header-text);
+    box-shadow: var(--box-shadow-medium);
+}
+
+header a {
+    color: var(--color-header-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Button Styles */
+button, .btn {
+    font-family: var(--font-primary);
+    border-radius: var(--border-radius-medium);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.primary, .btn-primary {
+    background-color: var(--color-secondary1);
+    color: var(--color-secondary2);
+}
+
+button.primary:hover, .btn-primary:hover {
+    background-color: #E3B948; /* Darker shade of Sunshine Yellow */
+    box-shadow: var(--box-shadow-light);
+}
+
+button.secondary, .btn-secondary {
+    background-color: var(--color-accent1);
+    color: var(--color-secondary2);
+}
+
+button.secondary:hover, .btn-secondary:hover {
+    background-color: var(--color-primary1);
+    box-shadow: var(--box-shadow-light);
+}
+
+/* Form Styles */
+input, textarea, select {
+    font-family: var(--font-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--color-primary1);
+    outline: none;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--color-secondary2);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-light);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--color-primary2);
+    color: var(--color-secondary2);
+}
+
+footer a {
+    color: var(--color-secondary1);
+}
+
+footer a:hover {
+    color: #C29D4E; /* Slightly darker yellow for contrast */
+}
+
+
+/* #################### Other style #################### */
+/* #################### header #################### */
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--size-header-height);
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .left {
+    display: flex;
+    width: 40%;
+}
+
+header .right {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end; /* Aligns the nav to the right side */
+}
+
+/* Aligns the logo and text together in a column */
+#logocontainer {
+    display: flex;
+    flex-direction: column; /* Stacks logo and text vertically */
+    align-items: center; /* Centers them horizontally */
+    text-align: center;
+    margin-left: 2rem;
+}
+
+#logocontainer img {
+    width: 60px;
+}
+
+#logocontainer h1 {
+    color: var(--color-secondary2); /* White text color */
+    font-size: var(--font-size-big); /* Use the heading font size */
+    margin: 0; /* Remove default margins */
+    padding-top: 0;
+}
+
+header .left h1 {
+    color: var(--color-secondary2);
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+header nav ul li {
+    padding-right: 2rem;
+    text-align: center;
+    min-width: 10rem;
+}
+
+header nav {
+    list-style: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-secondary2); /* Matches header text color */
+}
+
+#mobileMenu.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 880px) {
+    .hamburger {
+        display: block;
+        padding-right: 2rem;
+    }
+
+    header .right {
+        display: none; /* Hide default nav on small screens */
+    }
+
+    #mobileMenu {
+        background-color: var(--color-header-background);
+        text-align: center;
+        display: flex;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    #mobileMenu ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    #mobileMenu ul li {
+        padding: 1rem 1rem;
+    }
+}
+
+/* #################### Section Our Mission #################### */
+
+#section-ourmission p {
+    text-align: justify;
+}
+
+/* #################### Section Products #################### */
+
+#section-products {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#section-products p {
+    text-align: justify;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap; /* Allow product cards to wrap to the next line if they overflow */
+    gap: 1rem; /* Add space between product cards */
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.product-card {
+    display: flex; /* Use flexbox to arrange content inside the card */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: space-between; /* Space out the elements evenly within the card */
+    align-items: center; /* Center the elements horizontally within the card */
+    flex: 1 0 30%; /* Flex-grow: allow the card to grow; Flex-shrink: allow the card to shrink; Base size: 20% of container width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 1rem; /* Add padding inside the card */
+    background-color: #f9f9f9; /* Light gray background color for the card */
+    border: 1px solid var(--color-border); /* Light gray border around the card */
+    text-align: center; /* Center-align the text inside the card */
+    max-width: 24rem;
+    min-width: 18rem;
+    border-radius: var(--border-radius-small);
+}
+
+.product-card h2 {
+    font-size: 1.5rem; /* Set the font size for the heading */
+    font-weight: bold; /* Make the heading text bold */
+    color: #2f5d2f; /* Dark green color for the heading text */
+    margin-bottom: 10px; /* Add vertical margins above and below the heading */
+    padding-top: 0;
+    min-height: 60px; /* Set a minimum height for the heading to align with other cards */
+    display: flex; /* Use flexbox to center the text */
+    align-items: center; /* Vertically center the text inside the heading */
+    justify-content: center; /* Horizontally center the text inside the heading */
+}
+
+.product-card img {
+    width: 100%; /* Make the image take up the full width of the card */
+    max-width: 300px; /* Set a maximum width for the image */
+    height: auto; /* Maintain the image's aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 0.5rem; /* Add space below the image */
+    min-height: 150px; /* Set a minimum height for the image to align with other cards */
+}
+
+.product-card caption {
+    font-size: 1rem; /* Set the font size for the caption */
+    color: #666; /* Medium gray color for the caption text */
+    margin-top: 10px; /* Add space above the caption */
+    min-height: 50px; /* Set a minimum height for the caption to align with other cards */
+    display: flex; /* Use flexbox to center the text */
+    align-items: center; /* Vertically center the text inside the caption */
+    justify-content: center; /* Horizontally center the text inside the caption */
+}
+
+
+
+/* #################### Section Our Team #################### */
+
+#section-ourteam p {
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+#people{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Add space between product cards */
+    justify-content: space-around;
+}
+
+.people-card {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 0;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-secondary2);
+    border-radius: var(--border-radius-extra-large) 0 var(--border-radius-extra-large) 0;
+    box-shadow: var(--color-accent2) 2px 2px 6px;
+}
+
+.people-card h2 {
+    padding-top: 0;
+    text-align: center;
+}
+
+.role {
+    color: var(--color-primary2);
+    font-size: var(--font-size-big);
+}
+
+.people-card div {
+    display: flex;
+    align-items:start;
+}
+
+.people-card img {
+    width: 12rem;
+    height: 12rem;
+}
+
+.people-card p {
+    /* width: 50%; */
+    font-size: var(--font-size-quote);
+    margin: 1rem 2rem;
+}
+
+@media screen and (max-width: 880px) {
+
+    .people-card{
+        padding: 0;
+        width: 100%;
+        
+    }
+
+    .people-card img {
+        width: 80%;
+        height: auto;
+    }
+
+    .people-card p {
+        width: 80%;
+    }
+
+
+    .people-card div {
+        flex-direction: column;
+        align-items: center; /* Vertically center the text inside the caption */
+        justify-content: center; /* Horizontally center the text inside the caption */
+    }
+
+    .people-card div p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* #################### Footer #################### */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    font-size: var(--color-text-main);
+}
+
+footer ul {
+    list-style: none;
+}
+
+
+footer p {
+    color: var(--color-secondary2);
+}
+
